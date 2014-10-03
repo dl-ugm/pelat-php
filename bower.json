@@ -1,0 +1,25 @@
+{
+  "name": "UGM-Himpasikom-PHP-Training",
+  "version": "0.0.1",
+  "authors": [
+    "Rijalul Fikri <fikri.desertlion@gmail.com>"
+  ],
+  "description": "Pelatihan PHP oleh Himpasikom UGM",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Laravel",
+    "PHP"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dl-ugm/pelat-php",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
