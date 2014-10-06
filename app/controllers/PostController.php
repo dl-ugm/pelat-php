@@ -18,6 +18,10 @@ class PostController extends BaseController {
         return View::make('posts.index',['posts'=>$posts]);
     }
 
+    public function getCreate()
+    {
+        $this->layout->content = View::make('posts.new');
+    }
     /**
      * Fungsi untuk menambahkan Post baru ke tabel
      */
@@ -45,6 +49,17 @@ class PostController extends BaseController {
             ->withInput();
     }
 
+    public function getUpdate($id)
+    {
+        $post = Post::find($id);
+        if ($post) {
+            $this->layout->content = View::make('posts.edit')
+                ->with('post',$post);
+        } else {
+            return Redirect::back()
+                ->with('message','Post tidak ditemukan');
+        }
+    }
     public function postUpdate()
     {
         $v = Validator::make(Input::all(),Post::$editRules);

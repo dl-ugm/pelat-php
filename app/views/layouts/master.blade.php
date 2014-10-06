@@ -11,14 +11,20 @@
         <!-- Header -->
         <div class="row">
             <div class="col-xs-12">
-                <h1>Aplikasi CRUD sederhana dengan Laravel</h1>
+                <h1 class="clearfix">
+                    Aplikasi CRUD sederhana dengan Laravel
+                    <a class="btn btn-primary pull-right" href="{{ URL::to('/post/create') }}">
+                        <span class="glyphicon glyphicon-plus"></span> Add New Post
+                    </a>
+                </h1>
                 <h4>Disampaikan pada Pelatihan PHP oleh Himpasikom UGM tahun 2014</h4>
                 <hr/>
             </div>
         </div><!-- end of Header -->
         @if (Session::has('message'))
-        <div class="alert" role="alert">
-            <a href="#" class="alert-link">{{ Session::get('message') }}</a>
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            {{ Session::get('message') }}
         </div>
         @endif
         <div class="row">

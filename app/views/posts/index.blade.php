@@ -5,13 +5,13 @@
         <div class="panel-heading">
             <h2 class="clearfix">
                 {{ $post->title }}
-                {{ Form::open(['url'=>'post/destroy','class'=>'pull-right'])}}
+                {{ Form::open(['url'=>'post/delete/'.$post->id,'class'=>'pull-right'])}}
                 {{ Form::hidden('id', $post->id) }}
                 <div class="btn-group">
-                    <a class="btn btn-default" href="#">
+                    <a class="btn btn-default" href="{{ URL::to('post/edit/'.$post->id) }}">
                         <span class="glyphicon glyphicon-pencil"></span> Edit
                     </a>
-                    <button class="btn btn-default" href="#"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                    <button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span> Delete</button>
                 </div>
                 {{ Form::close() }}
             </h2>
