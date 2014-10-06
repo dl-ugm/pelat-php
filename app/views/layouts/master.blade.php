@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="clearfix">
-                    Aplikasi CRUD sederhana dengan Laravel
+                    <a href="{{ URL::to('/') }}">Aplikasi CRUD sederhana dengan Laravel</a>
                     <a class="btn btn-primary pull-right" href="{{ URL::to('/post/create') }}">
                         <span class="glyphicon glyphicon-plus"></span> Add New Post
                     </a>

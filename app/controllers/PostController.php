@@ -80,8 +80,10 @@ class PostController extends BaseController {
                 ->with('message','Post tidak ditemukan');
         }
 
-        return Redirect::to('/')
-            ->with('message','Post gagal di update');
+        return Redirect::back()
+            ->with('message','Post gagal diupdate')
+            ->withErrors($v)
+            ->withInput();
     }
 
     public function postDestroy()
