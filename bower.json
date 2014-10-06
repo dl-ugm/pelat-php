@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "todc-bootstrap": "~3.0.2"
+    "todc-bootstrap": "~3.0.2",
+    "fontawesome": "~4.2.0"
   }
 }
