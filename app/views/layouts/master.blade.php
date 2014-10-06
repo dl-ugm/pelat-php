@@ -21,6 +21,8 @@
                 <hr/>
             </div>
         </div><!-- end of Header -->
+        {{-- Ini adalah sebuah comment, style comment ini hanya dimiliki oleh file blade --}}
+        {{-- Tampilkan div dibawah jika terdapat sessi dengan key message --}}
         @if (Session::has('message'))
         <div class="alert alert-info alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -29,6 +31,7 @@
         @endif
         <div class="row">
             <div class="col-xs-12">
+                {{-- Tampilkan Konten utama disini --}}
                 @yield('content')
             </div>
         </div>
